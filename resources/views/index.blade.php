@@ -37,7 +37,7 @@
 
     <div class="row">
         <div class="image">
-            <img src="image/barista.jpg" alt="">
+            <img src="{{ url('/assetsHome/image/barista.jpg')}}" alt="">
         </div>
 
         <div class="content">
