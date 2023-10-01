@@ -29,7 +29,7 @@
                 <a href="#"><i class="fas fa-mug-hot"></i><u><strong>{{ $item->name_product }}</strong> - {{ $item->price }} <strong>Stok Habis</strong></u></a>
                 <span style="font-size: 12px;"><i>{{ $item->desc }}</i></span>
             @else
-                <a href="{{ route('addToCart', $item->id)}}"><i class="fas fa-mug-hot"></i><strong>{{ $item->name_product }}</strong> - {{ $item->price }} <strong>Klik</strong></del></a>
+                <a href="{{ route('addToCart', $item->id)}}"><i class="fas fa-mug-hot"></i><strong>{{ $item->name_product }}</strong> - {{ $item->price }} <strong></strong></del></a>
                 <span style="font-size: 12px;"><i>{{ $item->desc }}</i></span>
             @endif
             @php $i++; @endphp

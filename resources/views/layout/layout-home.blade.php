@@ -25,7 +25,9 @@
     <header class="header">
         <div id="menu-btn" class="fas fa-bars"></div>
 
-        <a href="#" class="logo">KUKOPINA <i class="fas fa-mug-hot"></i></a>
+        <a href="#" class="logo">
+            <img src="{{ url('/assets/img/logo.png')}}" alt="" class="img-responsive" width="100">
+        </a>
 
         <nav class="navbar">
             <a href="{{ route('home')}}#home">Home</a>
@@ -72,7 +74,7 @@
             <div class="box">
                 <h3>Contact Info</h3>
                 <a href="#"><i class="fab fa-whatsapp"></i> Whatsapp</a>
-                <a href="https://instagram.com/kukopina?igshid=NDk5N2NIZjQ="><i class="fab fa-instagram"></i> instagram</a>
+                <a href="#" id="instagramLink"><i class="fab fa-instagram"></i> instagram</a>
             </div>
         </div>
 
@@ -84,8 +86,24 @@
     <!-- Custom JS File Link  -->
     <script src="{{ url('/assetsHome/js/script.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        // Fungsi untuk mendeteksi jenis perangkat (desktop atau mobile)
+        function isMobileDevice() {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        }
+    
+        // Ambil tautan Instagram
+        var instagramLink = document.getElementById('instagramLink');
+    
+        // Tentukan URL Instagram sesuai dengan jenis perangkat
+        if (isMobileDevice()) {
+        instagramLink.href = "instagram://user?username=kukopina"; // Ganti dengan username yang sesuai
+        } else {
+        instagramLink.href = "https://www.instagram.com/kukopina/"; // Ganti dengan URL Instagram web
+        }
+    </script>
+  
     @section('js')
 
 </body>
